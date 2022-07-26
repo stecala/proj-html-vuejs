@@ -44,5 +44,12 @@ font-family: 'Open Sans', sans-serif;
     text-decoration: none;
     color: $txtColorWhite;
   }
+  &:hover{
+      background-color: white;
+      border: 1px solid black;
+  }
+  &:hover a{
+    color: black;
+  }
 }
 </style>
