@@ -1,7 +1,13 @@
 <template>
   <header>
-      <HeroDescription />
-      <HeroImg />
+    <div class="container-fluid">
+      <div class="col-5">
+          <HeroDescription />
+      </div>
+      <div class="col-7">
+          <HeroImg /> 
+      </div>
+    </div>
   </header>
 </template>
 
