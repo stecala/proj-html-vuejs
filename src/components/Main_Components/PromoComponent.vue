@@ -14,7 +14,7 @@
                     voluptatum, ipsum voluptatem consequuntur labore inventore repellat
                     hic quisquam praesentium laboriosam!
                 </p>
-                <img src="../../../public/img/signature.jpg" alt="signature" class="mt-5"/>
+                <img src="../../../public/img/signature.jpg" alt="signature" class="mt-3"/>
             </div>
             
             </div>
@@ -43,8 +43,8 @@ export default {
         font-size: 1.2rem;
     }
     h2 {
-        font-size: 3rem;
-        font-weight: bolder;
+        font-size: 4rem;
+        font-family: 'Bebas Neue', cursive;
     }
     img {
         margin-top: 25px;
