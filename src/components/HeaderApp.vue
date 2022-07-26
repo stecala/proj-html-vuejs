@@ -32,6 +32,9 @@ header{
 }
 .my-col-big{
   width: 59.3%;
+}
+.my-col-small,
+.my-col-big{
   padding: 0;
 }
 }
