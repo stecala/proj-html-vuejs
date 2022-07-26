@@ -1,17 +1,24 @@
 <template>
   <header>
-
+      <HeroDescription />
+      <HeroImg />
   </header>
 </template>
 
 <script>
+import HeroDescription from './Header_Components/HeroDescription.vue'
+import HeroImg from './Header_Components/HeroImg.vue'
+
 export default {
-  props: {
+  components :{
+    HeroDescription,
+    HeroImg,
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
+header{
+  min-height: 100vh;
+}
 </style>
