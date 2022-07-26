@@ -6,7 +6,7 @@
             
             </div>
             <div class="col-5 position-relative">
-                <img src="../../public/img/info22x.jpg" alt="california roll">
+                <img src="../../../public/img/info22x.jpg" alt="california roll">
                 <div class="position-absolute roll-name">
                     <span class="text-uppercase">california rolls - $22</span>
                 </div>
@@ -22,6 +22,15 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+@import '../assets/style/variables.scss';
+  img{
+    width: 100%;
+  }
+  .roll-name{
+    color: $txtColorWhite;
+    bottom: 15px;
+    left: 35%;
+    font-weight: bold;
+  }
 </style>

@@ -14,15 +14,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/variables.scss';
-  img{
-    width: 100%;
-  }
-  .roll-name{
-    color: $txtColorWhite;
-    bottom: 15px;
-    left: 35%;
-    font-weight: bold;
-  }
+
 
 </style>
