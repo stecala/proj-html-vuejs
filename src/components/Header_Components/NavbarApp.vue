@@ -75,7 +75,7 @@ export default {
 .position-absolute{
     color : $txtColorWhite;
     top: 0;
-    left: 8%;
+    left: 7.7%;
     font-weight: 300;
 }
 .unselected{
