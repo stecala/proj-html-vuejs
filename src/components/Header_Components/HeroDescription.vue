@@ -24,7 +24,7 @@ export default {
 
 .container-description{
   background-color: $blackBg;
-  padding-left: 105px;
+  padding: 0 105px;
   width: 100%;
   height: 100%;
   .logo-container{

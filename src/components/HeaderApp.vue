@@ -27,7 +27,7 @@ export default {
       txtForCard : {
           subtitle : 'the best table in town',
           title : 'fine dining experience',
-          text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga adipisci aut consequatur nam! Eius quas labore aperiam non, accusamus rerum animi fuga consectetur.',
+          text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga adipisci aut consequatur nam! Eius quas labore aperiam non.',
           btn : {
             url : '#',
             text_btn : 'explore the menu' 

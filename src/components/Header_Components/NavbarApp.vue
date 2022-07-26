@@ -80,6 +80,9 @@ export default {
 }
 .unselected{
  color: $txtColorUnselected;
+ &:hover{
+    color: $txtColorWhite;
+ }
 }
 .row{
     font-size: 1rem;
