@@ -6,7 +6,9 @@
 
 <script>
 export default {
-
+  props: {
+    cardsList : Array,
+  }
 }
 </script>
 
