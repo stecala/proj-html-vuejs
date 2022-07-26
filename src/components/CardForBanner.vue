@@ -14,6 +14,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables.scss';
     .txt-container{
       padding-top: 105px;
       padding-left: 150px;
