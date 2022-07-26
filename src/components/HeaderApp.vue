@@ -1,11 +1,13 @@
 <template>
   <header>
     <div class="container-fluid">
-      <div class="col-5">
-          <HeroDescription />
-      </div>
-      <div class="col-7">
-          <HeroImg /> 
+      <div class="row">
+        <div class="col-4">
+            <HeroDescription />
+        </div>
+        <div class="col-8">
+            <HeroImg /> 
+        </div>
       </div>
     </div>
   </header>
@@ -25,6 +27,10 @@ export default {
 
 <style scoped lang="scss">
 header{
-  min-height: 100vh;
+  .col-4, 
+  .col-8{
+    padding: 0;
+  }
+
 }
 </style>

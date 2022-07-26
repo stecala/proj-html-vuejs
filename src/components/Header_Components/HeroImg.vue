@@ -1,6 +1,7 @@
 <template>
   <div class="hero-container">
     <NavbarApp />
+    <img src="../../../public/img/slider52x.jpg" alt="hero image">
   </div>
 </template>
 
@@ -14,5 +15,13 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-
+.hero-container{
+    height: 100vh;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
 </style>
