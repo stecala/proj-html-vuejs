@@ -33,11 +33,13 @@ font-family: 'Open Sans', sans-serif;
 }
 .my-btn-white{
   width: 230px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: center;
   padding: 10px 0;
   cursor: pointer;
   border: 1px solid white;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
   a{
     text-decoration: none;
     color: $txtColorWhite;
