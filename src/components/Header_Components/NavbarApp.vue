@@ -1,7 +1,7 @@
 <template>
   <div class="position-absolute">
     <div class="row text-center pt-5 ">
-        <div class="px-5" v-for="(element, index) in nav" :key="index" :class="{unselected : element.selected == false}">
+        <div class="px-4" v-for="(element, index) in nav" :key="index" :class="{unselected : element.selected == false}">
             {{element.name}}
         </div>
         <div class="unselected">
@@ -74,11 +74,11 @@ export default {
     font-weight: 300;
 }
 .unselected{
- opacity: 0.6;
+ color: $txtColorUnselected;
 }
 .row{
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     div{
         width: fit-content;
         display: inline-block;
