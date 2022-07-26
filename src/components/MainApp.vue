@@ -1,6 +1,6 @@
 <template>
-  <main>
-
+  <main class="mt-5">
+    
   </main>
 </template>
 
@@ -10,6 +10,16 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import '../assets/style/variables.scss';
+  img{
+    width: 100%;
+  }
+  .roll-name{
+    color: $txtColorWhite;
+    bottom: 15px;
+    left: 35%;
+    font-weight: bold;
+  }
 
 </style>
