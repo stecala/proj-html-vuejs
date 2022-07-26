@@ -1,8 +1,13 @@
 <template>
   <div class="position-absolute">
     <div class="row text-center pt-5 ">
-        <div class="px-4" v-for="(element, index) in nav" :key="index" :class="{unselected : element.selected == false}">
-            {{element.name}}
+        <div class="px-4 d-flex" v-for="(element, index) in nav" :key="index" :class="{unselected : element.selected == false}">
+            <div >
+               {{element.name}} 
+            </div>
+            <div class="new ms-2 align-self-center" v-if="element.new">
+                <span>NEW</span>
+            </div>
         </div>
         <div class="unselected">
             <i class="fa-solid fa-cart-shopping"></i>
@@ -81,9 +86,15 @@ export default {
     font-weight: 500;
     div{
         width: fit-content;
-        display: inline-block;
         z-index: 1;
         cursor: pointer;
+        .new{
+            color: white;
+            font-size: 0.6rem;
+            font-weight: bold;
+            border: 1px solid $txtColorUnselected;
+            padding: 2px 7px;
+        }
     }
 }
 </style>
