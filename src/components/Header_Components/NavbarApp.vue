@@ -1,6 +1,13 @@
 <template>
-  <div>
-
+  <div class="position-absolute">
+    <div class="row text-center pt-5">
+        <div class="px-4" v-for="(element, index) in nav" :key="index" :class="{unselected : element.selected == false}">
+            {{element.name}}
+        </div>
+        <div class="unselected">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -16,7 +23,7 @@ export default {
                     selected : true,
                 },
                 {
-                    name : 'Cullinary History',
+                    name : 'Culinary History',
                     url : '#',
                     new : false,
                     selected : false,
@@ -51,12 +58,6 @@ export default {
                     new : false,
                     selected : false,
                 },
-                {
-                    name : '<i class="fa-solid fa-cart-shopping"></i>',
-                    url : '#',
-                    new : false,
-                    selected : false,
-                },
             ],
         
         }
@@ -64,6 +65,24 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+@import '../../assets/style/variables.scss';
+.position-absolute{
+    color : $txtColorWhite;
+    top: 0;
+    left: 8%;
+}
+.unselected{
+ opacity: 0.8;
+}
+.row{
+    font-size: 1.1rem;
+    font-weight: 400;
+    div{
+        width: fit-content;
+        display: inline-block;
+        z-index: 1;
+        cursor: pointer;
+    }
+}
 </style>

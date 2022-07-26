@@ -2,10 +2,10 @@
   <header>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-4">
+        <div class="my-col-small">
             <HeroDescription />
         </div>
-        <div class="col-8">
+        <div class="my-col-big">
             <HeroImg /> 
         </div>
       </div>
@@ -27,10 +27,12 @@ export default {
 
 <style scoped lang="scss">
 header{
-  .col-4, 
-  .col-8{
-    padding: 0;
-  }
-
+.my-col-small{
+  width: 40.7%;
+}
+.my-col-big{
+  width: 59.3%;
+  padding: 0;
+}
 }
 </style>

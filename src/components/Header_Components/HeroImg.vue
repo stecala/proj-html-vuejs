@@ -1,7 +1,8 @@
 <template>
-  <div class="hero-container">
+  <div class="hero-container position-relative">
     <NavbarApp />
     <img src="../../../public/img/slider52x.jpg" alt="hero image">
+    <div class="black-filter"></div>
   </div>
 </template>
 
@@ -22,6 +23,14 @@ export default {
         height: 100%;
         object-fit: cover;
         object-position: center;
+    }
+    .black-filter{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient( rgba(0, 0, 0, 0.4), transparent)
     }
 }
 </style>
