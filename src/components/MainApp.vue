@@ -17,7 +17,8 @@ export default {
     return{
       cardsList : [
         {
-          img : '../../../public/img/sushi-1.png',
+          img : '/img/sushi-1.png',
+          title : 'the best table in town',
           txt : 'Sed aenean egestas ut aliquam turpis mauris, molestie. Vitae tellus tempor sem id tempus neque, tellus turpis turpis. Morbi tortor id gravida aliquet.',
           btn : {
             url : '#',
@@ -25,7 +26,8 @@ export default {
           }
         },
          {
-          img : '../../../public/img/sushi-2.png',
+          img : '/img/sushi-2.png',
+          title : 'perfect for groups',
           txt : 'Sed aenean egestas ut aliquam turpis mauris, molestie. Vitae tellus tempor sem id tempus neque, tellus turpis turpis. Morbi tortor id gravida aliquet.',
           btn : {
             url : '#',
@@ -33,7 +35,8 @@ export default {
           }
         },
          {
-          img : '../../../public/img/sushi-3.png',
+          img : '/img/sushi-3.png',
+          title : 'fresh produce everyday',
           txt : 'Sed aenean egestas ut aliquam turpis mauris, molestie. Vitae tellus tempor sem id tempus neque, tellus turpis turpis. Morbi tortor id gravida aliquet.',
           btn : {
             url : '#',

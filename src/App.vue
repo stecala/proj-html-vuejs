@@ -31,26 +31,39 @@ export default {
 body{
 font-family: 'Open Sans', sans-serif;
 }
-.my-btn-white{
+.my-btn-white,
+.my-btn-dark{
   width: 230px;
   font-size: 1rem;
   text-align: center;
   padding: 10px 0;
   cursor: pointer;
-  border: 1px solid white;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   transition: all 0.5s ease-in;
+}
+.my-btn-white{
+  border: 1px solid white;
   a{
-    text-decoration: none;
-    color: $txtColorWhite;
-  }
-  &:hover{
+      text-decoration: none;
+      color: $txtColorWhite;
+    }
+     &:hover{
       background-color: white;
       border: 1px solid black;
   }
   &:hover a{
     color: black;
+  }
+}
+.my-btn-dark{
+  border: 1px solid $txtColorUnselected;
+  a{
+    text-decoration: none;
+    color: $blackBg;
+  }
+  &:hover{
+      border: 1px solid black;
   }
 }
 </style>
