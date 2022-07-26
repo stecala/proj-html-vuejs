@@ -40,6 +40,7 @@ font-family: 'Open Sans', sans-serif;
   border: 1px solid white;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
+  transition: all 0.5s ease-in;
   a{
     text-decoration: none;
     color: $txtColorWhite;
