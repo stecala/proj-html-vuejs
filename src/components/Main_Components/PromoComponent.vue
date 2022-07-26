@@ -54,7 +54,8 @@ export default {
 .img-container{
     height: 795px;
     overflow: hidden;
-
+    padding: 0;
+    transition: all 0.5s ease-in;
     img{
         width: 100%;
         object-fit: cover;
@@ -65,6 +66,11 @@ export default {
         bottom: 15px;
         left: 35%;
         font-weight: bold;
+    }
+    &:hover{
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.308);
+        transform: scale(0.95);
+        cursor: pointer;
     }
 }
 </style>
