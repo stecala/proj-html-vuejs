@@ -30,11 +30,12 @@ export default {
     .banner-container{
         width: 100%;
         max-height: 850px;
-        overflow: hidden;
         .img-container{
             width: 60%;
+            height: 100%;
             img{
-                max-width: 100%;
+                width: 100%;
+                height: 850px;
                 object-fit: cover;
                 object-position: center;
             }
