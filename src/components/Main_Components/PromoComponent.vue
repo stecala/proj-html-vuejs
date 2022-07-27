@@ -58,6 +58,7 @@ export default {
     transition: all 0.5s ease-in;
     img{
         width: 100%;
+        min-width: 640px;
         object-fit: cover;
         object-position: center;
     }
