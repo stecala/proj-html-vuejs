@@ -5,7 +5,7 @@
     </div>
     <div class="credits py-4 text-center">
         <ul>
-            <li v-for="(credit, index) in creditsList" :key="index">
+            <li v-for="(credit, index) in creditsList" :key="index" :class="{divider : index < (creditsList.length-1)}">
               {{credit}}
             </li>
         </ul>
@@ -40,12 +40,25 @@ export default {
   background-color: $blackBg;
   color: $txtColorUnselected;
   font-size: 0.8rem;
+  font-weight: bolder;
   ul{
     list-style: none;
     padding: 0;
     li{
       display: inline-block;
       padding: 0 10px;
+    }
+    .divider{
+      position: relative;
+    &:after {
+            content : "";
+            position: absolute;
+            right    : 0;
+            top : 2px;
+            width : 1px;
+            height : 70%;
+            background-color: $txtGrey;
+        }
     }
   }
 }
