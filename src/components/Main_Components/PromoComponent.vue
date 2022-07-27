@@ -3,7 +3,7 @@
     <div class="container-lg my-margin">
         <div class="row">
             <div class="col-6">
-                <div class="promo-text ">
+                <div class="promo-text mt-5">
                 <p>
                     <strong>HAC TELLUS, FELIS RISUS AT</strong> mattis mattis. Eget euismod semper eget tortor, donec amet, blandit. Tristique facilisi faucibus elementum feugiat in nam in feugiat. Ipsum odio etiam duis facilisis amet vulputate.
                 </p>
