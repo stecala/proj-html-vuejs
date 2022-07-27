@@ -2,7 +2,7 @@
   <main class="mt-5">
       <PromoComponent />
       <PromoCardsList :cardsList="cardsList" />
-      <BannerMain />
+      <BannerMain :imgBanner="imgBanner[0]" />
   </main>
 </template>
 
@@ -46,7 +46,8 @@ export default {
             'txt_btn': 'learn more about us',
           }
         },
-      ]
+      ],
+      imgBanner : ['/img/slider32x.jpg' , '/img/slider72x-scaled.jpg']
     }
   },
 }
