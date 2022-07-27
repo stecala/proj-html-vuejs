@@ -13,7 +13,7 @@ export default {
 <style scoped lang="scss">
 @import '../../assets/style/variables.scss';
 .small-line{
-    width: 40px;
+    width: 55px;
     height: 1px;
     background-color: $txtColorUnselected;
     margin: 10px auto;

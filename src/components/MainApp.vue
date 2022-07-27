@@ -3,6 +3,7 @@
       <PromoComponent />
       <PromoCardsList :cardsList="cardsList" />
       <BannerMain :imgBanner="imgBanner[0]" />
+      <SectionTitle :txtTitle="txtTitle[0]" />
   </main>
 </template>
 
@@ -10,11 +11,13 @@
 import PromoComponent from './Main_Components/PromoComponent.vue'
 import PromoCardsList from './Main_Components/PromoCardsList.vue'
 import BannerMain from './Main_Components/BannerMain.vue'
+import SectionTitle from './Main_Components/SectionTitle.vue'
 export default {
   components :{
     PromoComponent,
     PromoCardsList,
     BannerMain,
+    SectionTitle,
   }, 
   data : function(){
     return{
@@ -47,7 +50,8 @@ export default {
           }
         },
       ],
-      imgBanner : ['/img/slider32x.jpg' , '/img/slider72x-scaled.jpg']
+      imgBanner : ['/img/slider32x.jpg' , '/img/slider72x-scaled.jpg'],
+      txtTitle : ['What critics are saying about us', 'Latest news & promotions'],
     }
   },
 }

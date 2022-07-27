@@ -1,5 +1,5 @@
 <template>
-  <div class="banner-container d-flex mt-5">
+  <div class="banner-container d-flex my-margin">
         <div class="img-container">
             <img :src="imgBanner" alt="Banner Img">
         </div>

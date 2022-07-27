@@ -1,7 +1,7 @@
 <template>
-<div>
-    <h2>
-        ciao ciao
+<div class="text-center my-margin">
+    <h2 class="mb-4">
+        {{txtTitle}}
     </h2>
     <SmallLine />
 </div>
@@ -12,6 +12,9 @@ import SmallLine from './SmallLine.vue'
 export default {
     components:{
         SmallLine,
+    },
+    props : {
+        txtTitle: String
     }
 }
 </script>
@@ -21,6 +24,6 @@ export default {
 
     h2{
         font-family: 'Times New Roman', Times, serif;
-        font-style: italic;
+        font-size: 3rem;
     }
 </style>

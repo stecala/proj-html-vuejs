@@ -1,5 +1,5 @@
 <template>
-  <div class="container-lg my-5 pt-5">
+  <div class="container-lg my-margin">
      <div class="row">
         <PromoCard  v-for="(element , index) in cardsList" :key="index"  :element="element" />
      </div>
