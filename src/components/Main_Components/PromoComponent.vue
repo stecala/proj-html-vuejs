@@ -14,12 +14,12 @@
                     voluptatum, ipsum voluptatem consequuntur labore inventore repellat
                     hic quisquam praesentium laboriosam!
                 </p>
-                <img src="../../../public/img/signature.jpg" alt="signature" class="mt-3"/>
+                <img src="/img/signature.jpg" alt="signature" class="mt-3"/>
             </div>
             
             </div>
             <div class="col-6 position-relative img-container">
-                <img src="../../../public/img/info22x.jpg" alt="california roll">
+                <img src="/img/info22x.jpg" alt="california roll">
                 <div class="position-absolute roll-name">
                     <span class="text-uppercase">california rolls - $22</span>
                 </div>

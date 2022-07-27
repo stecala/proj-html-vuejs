@@ -1,7 +1,7 @@
 <template>
   <div class="container-description pt-4">
       <div class="logo-container mt-3">
-          <img src="../../../public/img/logo-restaurant-2x.png" alt="restaurant logo">
+          <img src="/img/logo-restaurant-2x.png" alt="restaurant logo">
       </div>
       <CardForBanner  :txtForCard="txtForCard" />
   </div>

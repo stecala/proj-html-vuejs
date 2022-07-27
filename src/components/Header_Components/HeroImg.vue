@@ -1,7 +1,7 @@
 <template>
   <div class="hero-container position-relative">
     <NavbarApp />
-    <img src="../../../public/img/slider52x.jpg" alt="hero image">
+    <img src="/img/slider52x.jpg" alt="hero image">
     <div class="black-filter"></div>
   </div>
 </template>
