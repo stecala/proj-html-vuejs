@@ -4,6 +4,7 @@
       <PromoCardsList :cardsList="cardsList" />
       <BannerMain :imgBanner="imgBanner[0]" />
       <SectionTitle :txtTitle="txtTitle[0]" />
+      <BigReview />
   </main>
 </template>
 
@@ -12,12 +13,14 @@ import PromoComponent from './Main_Components/PromoComponent.vue'
 import PromoCardsList from './Main_Components/PromoCardsList.vue'
 import BannerMain from './Main_Components/BannerMain.vue'
 import SectionTitle from './Main_Components/SectionTitle.vue'
+import BigReview from './Main_Components/BigReview.vue'
 export default {
   components :{
     PromoComponent,
     PromoCardsList,
     BannerMain,
     SectionTitle,
+    BigReview,
   }, 
   data : function(){
     return{
