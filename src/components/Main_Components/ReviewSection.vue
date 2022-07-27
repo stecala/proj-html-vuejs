@@ -8,14 +8,24 @@
           <ReviewCard :element="textCardsReview.firstReview" />
       </div>
     </div>
+    <div class="row mt-5">
+       <div class="my-col me-5">
+            <ImgGradient />
+       </div>
+       <div class="my-col ">
+            <ImgGradient />
+       </div>
+    </div>
   </div>
 </template>
 
 <script>
 import ReviewCard from './ReviewCard.vue'
+import ImgGradient from './ImgGradient.vue'
 export default {
   components : {
     ReviewCard,
+    ImgGradient
   },
   data : function(){
     return {
@@ -81,5 +91,8 @@ export default {
     }
     .card-container{
       background-color: $blackBg;
+    }
+    .my-col{
+      width: calc((100% / 2) - 1.5rem);
     }
 </style>
