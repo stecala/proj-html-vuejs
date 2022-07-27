@@ -9,6 +9,12 @@
       <img src="/img/page52x.jpg" alt="kung pao chicken">
       <div class="position-absolute txt-jumbo text-uppercase text-center">kungo pao chicken - $32</div>
     </section>
+    <SectionTitle :txtTitle="txtTitle[1]" />
+    <section class="mt-5">
+      <div class="card-news-container container-lg">
+          <CardNews />
+      </div>
+    </section>
   </main>
 </template>
 
@@ -18,6 +24,7 @@ import PromoCardsList from './Main_Components/PromoCardsList.vue'
 import BannerMain from './Main_Components/BannerMain.vue'
 import SectionTitle from './Main_Components/SectionTitle.vue'
 import ReviewSection from './Main_Components/ReviewSection.vue'
+import CardNews from './Main_Components/CardNews.vue'
 export default {
   components :{
     PromoComponent,
@@ -25,6 +32,7 @@ export default {
     BannerMain,
     SectionTitle,
     ReviewSection,
+    CardNews,
   }, 
   data : function(){
     return{
