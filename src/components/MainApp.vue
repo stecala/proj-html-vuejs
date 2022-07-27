@@ -22,7 +22,7 @@
     <section>
       <SectionTitle :txtTitle="txtTitle[1]" />
       <div class="card-news-container container-lg mt-5 d-flex justify-content-between">
-          <CardNews v-for="(element, index) in cardsListNews" :key="index" />
+          <CardNews v-for="(element, index) in cardsListNews" :key="index" :element="element" />
       </div>
     </section>
   </main>
@@ -80,6 +80,7 @@ export default {
       cardsListNews : [
       {
         url : '/img/blog92x-1200x1375.jpg',
+        alt : 'coffee',
         title : 'the best coffee in town',
         'sub_text' : {
           author : 'By author',
@@ -89,6 +90,7 @@ export default {
       },
       {
         url : '/img/blog72x-1200x1375.jpg',
+        alt : 'coocking',
         title : 'discover our new menu',
         'sub_text' : {
           author : 'By author',
@@ -98,6 +100,7 @@ export default {
       },
       {
         url : '/img/blog82x.jpg',
+        alt : 'square payment',
         title : 'we now accept square!',
         'sub_text' : {
           author : 'By author',
