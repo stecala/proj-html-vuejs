@@ -1,10 +1,14 @@
 <template>
   <main class="mt-5">
-      <PromoComponent />
-      <PromoCardsList :cardsList="cardsList" />
-      <BannerMain :imgBanner="imgBanner[0]" />
-      <SectionTitle :txtTitle="txtTitle[0]" />
-      <ReviewSection />
+    <PromoComponent />
+    <PromoCardsList :cardsList="cardsList" />
+    <BannerMain :imgBanner="imgBanner[0]" />
+    <SectionTitle :txtTitle="txtTitle[0]" />
+    <ReviewSection />
+    <section class="jumbotron position-relative my-margin">
+      <img src="/img/page52x.jpg" alt="kung pao chicken">
+      <div class="position-absolute txt-jumbo text-uppercase text-center">kungo pao chicken - $32</div>
+    </section>
   </main>
 </template>
 
@@ -61,6 +65,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables.scss';
+.jumbotron{
+  width: 100%;
+  height: 600px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .txt-jumbo{
+      left: 0;
+      bottom: 15px;
+      width: 100%;
+      color : $txtColorWhite;
+      font-weight: bolder;
+    }
 
+}
 
 </style>
