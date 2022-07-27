@@ -4,7 +4,7 @@
             <img :src="element.img" alt="sushi">
         </div>
         <h2>{{element.title}}</h2>
-        <div class="small-line"></div>
+        <SmallLine />
         <p>
             {{element.txt}}
         </p>
@@ -15,7 +15,11 @@
 </template>
 
 <script>
+import SmallLine from './SmallLine.vue'
 export default {
+    components:{
+        SmallLine,
+    },
     props :{
         element : Object
     }
@@ -29,11 +33,6 @@ h2{
     font-family: 'Bebas Neue', cursive;
 
 }
-.small-line{
-    width: 40px;
-    height: 1px;
-    background-color: $txtColorUnselected;
-    margin: 10px auto;
-}
+
 
 </style>
