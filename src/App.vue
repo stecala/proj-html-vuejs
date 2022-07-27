@@ -31,6 +31,11 @@ export default {
 body{
 font-family: 'Open Sans', sans-serif;
 }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .my-btn-white,
 .my-btn-dark{
   width: 230px;
