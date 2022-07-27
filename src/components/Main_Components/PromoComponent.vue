@@ -67,6 +67,7 @@ export default {
         bottom: 15px;
         left: 35%;
         font-weight: bold;
+        font-size: 0.8rem;
     }
     &:hover{
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.308);

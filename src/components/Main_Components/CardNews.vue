@@ -1,6 +1,6 @@
 <template>
-  <div>
-    
+  <div class="card-container">
+
   </div>
 </template>
 
@@ -10,6 +10,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+.card-container{
+    width: calc(100% / 3 - 40px);
+}
 </style>

@@ -1,18 +1,28 @@
 <template>
   <main class="mt-5">
-    <PromoComponent />
-    <PromoCardsList :cardsList="cardsList" />
-    <BannerMain :imgBanner="imgBanner[0]" />
-    <SectionTitle :txtTitle="txtTitle[0]" />
-    <ReviewSection />
+    <section>
+      <PromoComponent />
+      <PromoCardsList :cardsList="cardsListPromo" />
+    </section>
+    
+    <section>
+      <BannerMain :imgBanner="imgBanner[0]" />
+    </section>
+    
+    <section>
+      <SectionTitle :txtTitle="txtTitle[0]" />
+      <ReviewSection />
+    </section>
+   
     <section class="jumbotron position-relative my-margin">
       <img src="/img/page52x.jpg" alt="kung pao chicken">
       <div class="position-absolute txt-jumbo text-uppercase text-center">kungo pao chicken - $32</div>
     </section>
-    <SectionTitle :txtTitle="txtTitle[1]" />
-    <section class="mt-5">
-      <div class="card-news-container container-lg">
-          <CardNews />
+
+    <section>
+      <SectionTitle :txtTitle="txtTitle[1]" />
+      <div class="card-news-container container-lg mt-5 d-flex justify-content-between">
+          <CardNews v-for="(element, index) in cardsListNews" :key="index" />
       </div>
     </section>
   </main>
@@ -36,7 +46,7 @@ export default {
   }, 
   data : function(){
     return{
-      cardsList : [
+      cardsListPromo : [
         {
           img : '/img/sushi-1.png',
           title : 'the best table in town',
@@ -67,6 +77,36 @@ export default {
       ],
       imgBanner : ['/img/slider32x.jpg' , '/img/slider72x-scaled.jpg'],
       txtTitle : ['What critics are saying about us', 'Latest news & promotions'],
+      cardsListNews : [
+      {
+        url : '/img/blog92x-1200x1375.jpg',
+        title : 'the best coffee in town',
+        'sub_text' : {
+          author : 'By author',
+          date : 'January 7th, 2020',
+          categories : 'Categories: News'
+        },
+      },
+      {
+        url : '/img/blog72x-1200x1375.jpg',
+        title : 'discover our new menu',
+        'sub_text' : {
+          author : 'By author',
+          date : 'January 7th, 2020',
+          categories : 'Categories: News'
+        },
+      },
+      {
+        url : '/img/blog82x.jpg',
+        title : 'we now accept square!',
+        'sub_text' : {
+          author : 'By author',
+          date : 'January 7th, 2020',
+          categories : 'Categories: News'
+        },
+      },
+      
+      ]
     }
   },
 }
@@ -86,6 +126,7 @@ export default {
       bottom: 15px;
       width: 100%;
       color : $txtColorWhite;
+      font-size: 0.8rem;
       font-weight: bolder;
     }
 
