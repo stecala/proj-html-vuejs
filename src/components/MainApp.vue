@@ -2,16 +2,19 @@
   <main class="mt-5">
       <PromoComponent />
       <PromoCardsList :cardsList="cardsList" />
+      <BannerMain />
   </main>
 </template>
 
 <script>
 import PromoComponent from './Main_Components/PromoComponent.vue'
 import PromoCardsList from './Main_Components/PromoCardsList.vue'
+import BannerMain from './Main_Components/BannerMain.vue'
 export default {
   components :{
     PromoComponent,
     PromoCardsList,
+    BannerMain,
   }, 
   data : function(){
     return{
