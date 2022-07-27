@@ -3,13 +3,15 @@
     <div class="container-hero-footer">
         <img src="/img/footer2x.jpg" alt="bar">
     </div>
-    <div class="credits py-4 text-center">
-        <ul>
-            <li v-for="(credit, index) in creditsList" :key="index" :class="{divider : index < (creditsList.length-1)}">
-              {{credit}}
-            </li>
-        </ul>
-    </div>
+    <section>
+      <div class="credits py-4 text-center">
+          <ul>
+              <li v-for="(credit, index) in creditsList" :key="index" :class="{divider : index < (creditsList.length-1)}">
+                {{credit}}
+              </li>
+          </ul>
+      </div>
+    </section>
   </footer>
 </template>
 
