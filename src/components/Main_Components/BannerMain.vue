@@ -17,23 +17,11 @@ import CardForBanner from '../CardForBanner.vue'
 export default {
     props:{
         imgBanner : String,
+        txtForCard : Object,
     },
     components : {
         CardForBanner,
     },
-    data : function(){
-    return{
-      txtForCard : {
-          subtitle : 'fine dining experience',
-          title : 'the best table in town',
-          text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga adipisci aut consequatur nam! Eius quas labore aperiam non.',
-          btn : {
-            url : '#',
-            text_btn : 'explore the menu' 
-          }
-      },
-    }
-  }
 }
 </script>
 <style lang="scss" scoped>

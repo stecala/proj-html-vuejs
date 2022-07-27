@@ -6,7 +6,7 @@
     </section>
     
     <section>
-      <BannerMain :imgBanner="imgBanner[0]" />
+      <BannerMain :imgBanner="imgBanner[0]" :txtForCard="txtForCard[0]" />
     </section>
     
     <section>
@@ -24,6 +24,10 @@
       <div class="card-news-container container-lg mt-5 d-flex justify-content-between">
           <CardNews v-for="(element, index) in cardsListNews" :key="index" :element="element" />
       </div>
+    </section>
+    
+    <section>
+      <BannerMain :imgBanner="imgBanner[1]" :txtForCard="txtForCard[1]" />
     </section>
   </main>
 </template>
@@ -109,7 +113,28 @@ export default {
         },
       },
       
-      ]
+      ],
+      txtForCard : [
+          {
+            subtitle : 'fine dining experience',
+            title : 'the best table in town',
+            text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga adipisci aut consequatur nam! Eius quas labore aperiam non.',
+            btn : {
+              url : '#',
+              text_btn : 'explore the menu' 
+          }
+          },
+          {
+            subtitle : 'enjoy your meal at home',
+            title : 'take out now aviable',
+            text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga adipisci aut consequatur nam! Eius quas labore aperiam non.',
+            btn : {
+              url : '#',
+              text_btn : '🚘 view takeout menu' 
+          }
+          
+          },
+      ],
     }
   },
 }
