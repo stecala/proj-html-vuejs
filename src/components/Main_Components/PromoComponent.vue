@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-5">
+  <div>
     <div class="container-lg my-margin">
         <div class="row">
             <div class="col-6">

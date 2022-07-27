@@ -27,6 +27,7 @@ export default {
   padding: 0 105px;
   width: 100%;
   height: 100%;
+  min-height: 961px;
   .logo-container{
     height: 59px;
     margin-bottom: 50px;

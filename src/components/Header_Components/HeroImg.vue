@@ -17,10 +17,10 @@ export default {
 
 <style lang='scss' scoped>
 .hero-container{
-    height: 100vh;
+    height: 961px;
     img{
         width: 100%;
-        height: 100%;
+        height: 961px ;
         object-fit: cover;
         object-position: center;
     }
