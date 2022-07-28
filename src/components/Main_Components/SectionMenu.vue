@@ -42,11 +42,11 @@
 
             <div class="card-container position-relative" >
 
-                <div class="slider-left position-absolute" @click="goPrevDish()">
+                <div class="slider-left position-absolute" @click="goPrevDish() ; clickAnimationPrev()" :class="{ 'jello-horizontal' : clickPrev }" >
                     <i class="fa-solid fa-angle-left"></i>
                 </div>
 
-                <div class="slider-right position-absolute" @click="goNextDish()">
+                <div class="slider-right position-absolute" @click="goNextDish(); clickAnimationNxt()" :class="{ 'jello-horizontal' : clickNxt }">
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
 
@@ -182,6 +182,8 @@ export default {
             ],
             currentID : 1,
             dishesID : 0,
+            clickNxt : false,
+            clickPrev : false,
         }
     },
     methods :{
@@ -200,6 +202,18 @@ export default {
             if(this.dishesID == - 1){
                 this.dishesID = this.menus[this.currentID].dishes.length - 1
             }
+        },
+        clickAnimationNxt() {
+            this.clickNxt = true
+            setTimeout(() => {
+                this.clickNxt = false
+            },500)
+        },
+        clickAnimationPrev() {
+            this.clickPrev = true
+            setTimeout(() => {
+                this.clickPrev = false
+            },500)
         }
     }
 }
@@ -298,6 +312,7 @@ export default {
         .slider-right{
             top: 45%;
             font-size: 2rem;
+            cursor: pointer;
         }
 
 
@@ -313,6 +328,40 @@ export default {
             margin-top: 70px;
         }
     }
-    
+    .jello-horizontal {
+        -webkit-animation: jello-horizontal 0.9s both;
+        animation: jello-horizontal 0.9s both;
+    }
+    @keyframes jello-horizontal {
+        0% {
+            -webkit-transform: scale3d(1, 1, 1);
+                    transform: scale3d(1, 1, 1);
+        }
+        30% {
+            -webkit-transform: scale3d(1.25, 0.75, 1);
+                    transform: scale3d(1.25, 0.75, 1);
+        }
+        40% {
+            -webkit-transform: scale3d(0.75, 1.25, 1);
+                    transform: scale3d(0.75, 1.25, 1);
+        }
+        50% {
+            -webkit-transform: scale3d(1.15, 0.85, 1);
+                    transform: scale3d(1.15, 0.85, 1);
+        }
+        65% {
+            -webkit-transform: scale3d(0.95, 1.05, 1);
+                    transform: scale3d(0.95, 1.05, 1);
+        }
+        75% {
+            -webkit-transform: scale3d(1.05, 0.95, 1);
+                    transform: scale3d(1.05, 0.95, 1);
+        }
+        100% {
+            -webkit-transform: scale3d(1, 1, 1);
+                    transform: scale3d(1, 1, 1);
+        }
+        }
+
 }
 </style>
