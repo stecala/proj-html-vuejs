@@ -1,11 +1,11 @@
 <template>
 <div>
-    <section>
+    <section id='menu'>
         <div class="my-margin d-flex justify-content-center ">
 
                 
                 <div class="single-menu position-relative " v-for="menu in menus" :key="menu.id" @click="setCurrentId(menu.id)" :class="(menu.id==currentID) ? 'selected-menu' : 'unselected-menu' " >
-                    <a href="#section">
+                    <a href="#banner-menu">
                         <div class="img-cont" v-if="menu.id==currentID">
                             <img :src="menu.menu_img" alt="menu image">
                         </div>
@@ -33,7 +33,7 @@
         </div>
     </section>
     <section>
-        <div class="banner-section my-margin position-relative d-flex align-items-center " id="section">
+        <div class="banner-section my-margin position-relative d-flex align-items-center " id="banner-menu">
             
 
             <div class="position-absolute img-banner">
@@ -72,7 +72,7 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col12">
-                        <BtnApp  :isWhite="isWhite" :elementURl="url" :element="txt"/>
+                        <BtnApp  :isWhite="isWhite" :elementURL="url" :element="txt"/>
                     </div>
                 </div>
             </div>
@@ -191,7 +191,7 @@ export default {
             clickNxt : false,
             clickPrev : false,
             isWhite : true,
-            url : '#',
+            url : '#menu',
             txt : 'VIEW ON THE MENU',
         }
     },
@@ -313,11 +313,11 @@ export default {
         padding: 90px 90px 0 90px;
 
         .slider-left{
-            left: 6px;
+            left: 8px;
 
         }
         .slider-right{
-            right: 6px;        
+            right: 8px;        
         }
 
         .slider-left,
