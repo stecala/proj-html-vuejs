@@ -187,6 +187,7 @@ export default {
     methods :{
         setCurrentId(elementID){
             this.currentID = elementID
+            this.dishesID = 0
         },
         goNextDish(){
             this.dishesID = this.dishesID +1

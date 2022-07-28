@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import CardForBanner from '../CardForBanner.vue'
+import CardForBanner from '../Common/CardForBanner.vue'
 export default {
   components : {
     CardForBanner,
