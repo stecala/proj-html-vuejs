@@ -3,14 +3,17 @@
     <NavbarApp />
     <img src="/img/slider52x.jpg" alt="hero image">
     <div class="black-filter"></div>
+    <OverlayDiscount />
   </div>
 </template>
 
 <script>
 import NavbarApp from './NavbarApp.vue'
+import OverlayDiscount from './OverlayDiscount.vue'
 export default {
     components : {
         NavbarApp,
+        OverlayDiscount,
     }
 }
 </script>
