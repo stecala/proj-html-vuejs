@@ -20,12 +20,13 @@ export default {
 
 <style lang='scss' scoped>
 .hero-container{
-    height: 961px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
     img{
         width: 100%;
-        height: 961px ;
+        height: 100vh;
         object-fit: cover;
-        object-position: center;
     }
     .black-filter{
         position: absolute;

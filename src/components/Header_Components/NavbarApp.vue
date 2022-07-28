@@ -2,9 +2,9 @@
   <div class="position-absolute  w-100" id="navbar">
     <div class="row text-center pt-5 w-100 ">
         <div class="col-12 d-flex mx-auto justify-content-around flex-wrap w-100">
-            <div class="d-flex " v-for="(element, index) in nav" :key="index" :class="{unselected : element.selected == false}">
+            <div class="d-flex " v-for="(element, index) in nav" :key="index" :class="element.selected == false ? 'unselected' : 'selected'">
                 <div >
-                {{element.name}} 
+                <a :href="element.url">{{element.name}}</a> 
                 </div>
                 <div class="new ms-2 align-self-center" v-if="element.new">
                     <span>NEW</span>
@@ -43,7 +43,7 @@ export default {
                 },
                 {
                     name : 'Our Menu',
-                    url : '#',
+                    url : '#menu',
                     new : false,
                     selected : false,
                 },
@@ -74,18 +74,28 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../assets/style/variables.scss';
-
+#navbar{
+    a{
+        text-decoration: none;
+    }
+}
 .position-absolute{
-    color : $txtColorWhite;
     top: 0;
     left: 0;
     font-weight: 300;
 }
+.selected{
+    a{
+        color : $txtColorWhite;
+    }
+}
 .unselected{
- color: $txtColorUnselected;
- &:hover{
-    color: $txtColorWhite;
- }
+    a{
+        color: $txtColorUnselected;
+    }
+    &:hover a{
+        color: $txtColorWhite;
+    }
 }
 .row{
     font-size: 1rem;
@@ -95,7 +105,7 @@ export default {
         z-index: 1;
         cursor: pointer;
         .new{
-            color: white;
+            color: $txtColorWhite;
             font-size: 0.6rem;
             font-weight: bold;
             border: 1px solid $txtColorUnselected;
@@ -103,4 +113,5 @@ export default {
         }
     }
 }
+
 </style>
