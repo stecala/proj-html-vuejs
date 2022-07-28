@@ -34,10 +34,22 @@
     </section>
     <section>
         <div class="banner-section my-margin position-relative d-flex align-items-center " id="section">
+            
+
             <div class="position-absolute img-banner">
                     <img :src="menus[currentID].banner_img" alt="banner img">
             </div>
+
             <div class="card-container position-relative" >
+
+                <div class="slider-left position-absolute" @click="goPrevDish()">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+
+                <div class="slider-right position-absolute" @click="goNextDish()">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+
                 <div class="row">
                     <div class="col-9">
                         <h2 class="text-uppercase card-title">
@@ -54,8 +66,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12">
-                        
+                    <div class="col-12 mt-5">
+                        <span>{{menus[currentID].dishes[dishesID].description}}</span>
                     </div>
                 </div>
             </div>
@@ -175,6 +187,18 @@ export default {
     methods :{
         setCurrentId(elementID){
             this.currentID = elementID
+        },
+        goNextDish(){
+            this.dishesID = this.dishesID +1
+            if(this.dishesID == this.menus[this.currentID].dishes.length){
+                this.dishesID = 0
+            }
+        },
+        goPrevDish(){
+            this.dishesID = this.dishesID - 1
+            if(this.dishesID == - 1){
+                this.dishesID = this.menus[this.currentID].dishes.length - 1
+            }
         }
     }
 }
@@ -185,7 +209,7 @@ export default {
 .single-menu{
     width: calc(100% / 3 - 100px);
     background-color: $bgGrey;
-    min-height: 830px;
+    min-height: 850px;
     cursor: pointer;
     transition: all 0.5s;
     .img-cont{
@@ -193,7 +217,7 @@ export default {
         height: 100%;
         img{
             width: 100%;
-            height: 840px;
+            height: 860px;
             object-fit: cover;
             object-position: center;
         }
@@ -260,6 +284,22 @@ export default {
         background-color: $blackBg;
         color: $txtColorWhite;
         padding: 90px;
+
+        .slider-left{
+            left: 6px;
+
+        }
+        .slider-right{
+            right: 6px;        
+        }
+
+        .slider-left,
+        .slider-right{
+            top: 45%;
+            font-size: 2rem;
+        }
+
+
         .card-title{
             font-size: 3rem;
             font-weight: 700;
