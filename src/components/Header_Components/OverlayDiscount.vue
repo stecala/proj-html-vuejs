@@ -93,6 +93,8 @@ export default {
         height: 50px;
         border-radius: 5px 5px 5px 5px;
         transition: all ease-in-out;
+        box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.671);
+
     }
     .notification{
         position: absolute;
@@ -103,6 +105,8 @@ export default {
         background-color: red;
         color: white;
         border-radius: 50%;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.671);
+
         i{
             font-weight: 700;
             font-size: 0.8rem;
