@@ -8,14 +8,21 @@
         <div class="spacer"></div>
         <span v-if="(element.txt.paragraph2 !='')">{{element.txt.paragraph2}}</span>
     </div>
-      <div class="my-btn-white mt-5">
-        <a :href="element.btn.url">{{element.btn.text}}</a>
-      </div>
+    <BtnApp :element="element.btn.text" :elementURL="element.btn.url" :isWhite="isWhite" />
   </div>
 </template>
 
 <script>
+import BtnApp from '../Common/BtnApp.vue'
 export default {
+    data: function(){
+        return{
+            isWhite : true,
+        }
+    },
+    components :{
+        BtnApp,
+    },
     props : {
         element : Object,
     }

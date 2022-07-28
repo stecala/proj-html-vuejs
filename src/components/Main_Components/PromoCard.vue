@@ -8,17 +8,23 @@
         <p>
             {{element.txt}}
         </p>
-        <div class="my-btn-dark mt-4 mx-auto">
-            <a :href="element.btn.url">{{element.btn.txt_btn}}</a>
-        </div>
+        <BtnApp :isWhite="isWhite" :element="element.btn.txt_btn" :elementURL="element.btn.url"/>
+  
   </div>
 </template>
 
 <script>
 import SmallLine from './SmallLine.vue'
+import BtnApp from '../Common/BtnApp.vue'
 export default {
+    data : function(){
+        return{
+            isWhite : false,
+        }
+    },
     components:{
         SmallLine,
+        BtnApp,
     },
     props :{
         element : Object

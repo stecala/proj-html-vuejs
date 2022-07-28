@@ -63,6 +63,7 @@ font-family: 'Open Sans', sans-serif;
 }
 .my-btn-dark{
   border: 1px solid $txtColorUnselected;
+  margin: 0 auto;
   a{
     text-decoration: none;
     color: $blackBg;

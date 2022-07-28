@@ -3,14 +3,21 @@
       <div class="subtitle text-uppercase position-relative">{{txtForCard.subtitle}}</div>
       <div class="title mt-4 text-uppercase">{{txtForCard.title}}</div>
       <div class="txt mt-4">{{txtForCard.text}}</div>
-      <div class="my-btn-white mt-5">
-        <a :href="txtForCard.btn.url">{{txtForCard.btn.text_btn}}</a>
-      </div>
+      <BtnApp :isWhite="isWhite" :element="txtForCard.btn.text_btn" :elementURL="txtForCard.btn.url" />
   </div>
 </template>
 
 <script>
+import BtnApp from './BtnApp.vue'
 export default {
+  data : function(){
+    return{
+      isWhite : true,
+    }
+  },
+  components:{
+    BtnApp,
+  },
   props : {
     txtForCard : Object,
   },
