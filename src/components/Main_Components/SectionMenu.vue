@@ -70,6 +70,11 @@
                         <span>{{menus[currentID].dishes[dishesID].description}}</span>
                     </div>
                 </div>
+                <div class="row mt-3">
+                    <div class="col12">
+                        <BtnApp  :isWhite="isWhite" :elementURl="url" :element="txt"/>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -78,6 +83,7 @@
 </template>
 
 <script>
+import BtnApp from '../Common/BtnApp.vue'
 export default {
     data : function(){
         return{
@@ -184,6 +190,9 @@ export default {
             dishesID : 0,
             clickNxt : false,
             clickPrev : false,
+            isWhite : true,
+            url : '#',
+            txt : 'VIEW ON THE MENU',
         }
     },
     methods :{
@@ -215,6 +224,9 @@ export default {
                 this.clickPrev = false
             },500)
         }
+    },
+    components : {
+        BtnApp,
     }
 }
 </script>
@@ -294,11 +306,11 @@ export default {
     }
     .card-container{
         width: 530px;
-        min-height: 600px;
+        min-height: 640px;
         margin-left: 300px;
         background-color: $blackBg;
         color: $txtColorWhite;
-        padding: 90px;
+        padding: 90px 90px 0 90px;
 
         .slider-left{
             left: 6px;
