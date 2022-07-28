@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="unselected">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
     </div>
