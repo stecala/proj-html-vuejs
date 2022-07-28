@@ -18,12 +18,15 @@
       </div>
     </section>
     <section>
-      <div class="credits py-4 text-center">
+      <div class="credits py-4 text-center position-relative">
           <ul>
               <li v-for="(credit, index) in creditsList" :key="index" :class="{divider : index < (creditsList.length-1)}">
                 {{credit}}
               </li>
           </ul>
+          <div class="position-absolute top-anchor">
+              <a href="#navbar"><i class="fa-solid fa-angle-up"></i></a>
+          </div>
       </div>
     </section>
   </footer>
@@ -124,6 +127,19 @@ export default {
             background-color: $txtGrey;
         }
     }
+  }
+}
+.top-anchor{
+  width: 50px;
+  height: 30px;
+  bottom: 0;
+  right: 10%;
+  background-color: $txtGrey;
+  color: $txtColorWhite;
+  cursor: pointer;
+  font-size: 1.3rem;
+  a{
+    color: $txtColorWhite;
   }
 }
 </style>

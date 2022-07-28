@@ -14,9 +14,11 @@
       <ReviewSection />
     </section>
    
-    <section class="jumbotron position-relative my-margin">
-      <img src="/img/page52x.jpg" alt="kung pao chicken">
-      <div class="position-absolute txt-jumbo text-uppercase text-center">kungo pao chicken - $32</div>
+    <section>
+      <div class="jumbotron position-relative my-margin">
+        <img src="/img/page52x.jpg" alt="kung pao chicken">
+        <div class="position-absolute txt-jumbo text-uppercase text-center">kungo pao chicken - $32</div>
+      </div>
     </section>
 
     <section>
@@ -151,6 +153,7 @@ export default {
 .jumbotron{
   width: 100%;
   height: 600px;
+  z-index: -1;
     img{
       width: 100%;
       height: 100%;

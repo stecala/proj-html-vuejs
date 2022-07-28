@@ -1,5 +1,5 @@
 <template>
-  <div class="position-absolute  w-100 ">
+  <div class="position-absolute  w-100" id="navbar">
     <div class="row text-center pt-5 w-100 ">
         <div class="col-12 d-flex mx-auto justify-content-around flex-wrap w-100">
             <div class="d-flex " v-for="(element, index) in nav" :key="index" :class="{unselected : element.selected == false}">
