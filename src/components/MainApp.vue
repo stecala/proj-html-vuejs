@@ -29,6 +29,10 @@
     <section>
       <BannerMain :imgBanner="imgBanner[1]" :txtForCard="txtForCard[1]" />
     </section>
+
+    <section> 
+        <SectionMenu />
+    </section>
   </main>
 </template>
 
@@ -39,6 +43,7 @@ import BannerMain from './Main_Components/BannerMain.vue'
 import SectionTitle from './Main_Components/SectionTitle.vue'
 import ReviewSection from './Main_Components/ReviewSection.vue'
 import CardNews from './Main_Components/CardNews.vue'
+import SectionMenu from './Main_Components/SectionMenu.vue'
 export default {
   components :{
     PromoComponent,
@@ -47,6 +52,7 @@ export default {
     SectionTitle,
     ReviewSection,
     CardNews,
+    SectionMenu,
   }, 
   data : function(){
     return{
