@@ -56,6 +56,7 @@ font-family: 'Open Sans', sans-serif;
      &:hover{
       background-color: white;
       border: 1px solid black;
+      color: black;
   }
   &:hover a{
     color: black;
