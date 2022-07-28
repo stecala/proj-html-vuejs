@@ -28,7 +28,7 @@ export default {
   background-color: $blackBg;
   width: 100%;
   height: 100%;
-  min-height: 100vh;
+  min-height: 1020px;
   .logo-container{
     width: 50%;
     height: 59px;
