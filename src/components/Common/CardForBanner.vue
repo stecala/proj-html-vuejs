@@ -1,9 +1,11 @@
 <template>
-  <div class="txt-container">
+  <div class="txt-container d-flex flex-column justify-content-center align-items-center">
+    <div class="my-cont mt-5">
       <div class="subtitle text-uppercase position-relative">{{txtForCard.subtitle}}</div>
       <div class="title mt-4 text-uppercase">{{txtForCard.title}}</div>
       <div class="txt mt-4">{{txtForCard.text}}</div>
       <BtnApp :isWhite="isWhite" :element="txtForCard.btn.text_btn" :elementURL="txtForCard.btn.url" />
+    </div>
   </div>
 </template>
 
@@ -28,10 +30,12 @@ export default {
 @import '../../assets/style/variables.scss';
 
     .txt-container{
-      padding-top: 105px;
-      padding-left: 120px;
+      
       color: $txtColorWhite;
       font-family: 'Bebas Neue', cursive;
+      .my-cont{
+        max-width: 400px;
+      }
       .subtitle{
         font-size: 1rem;
         font-family: 'Poppins', sans-serif;

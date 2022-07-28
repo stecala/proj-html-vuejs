@@ -1,16 +1,18 @@
 <template>
-  <div class="position-absolute">
-    <div class="row text-center pt-5 ">
-        <div class="px-4 d-flex" v-for="(element, index) in nav" :key="index" :class="{unselected : element.selected == false}">
-            <div >
-               {{element.name}} 
+  <div class="position-absolute  w-100 ">
+    <div class="row text-center pt-5 w-100 ">
+        <div class="col-12 d-flex mx-auto justify-content-around flex-wrap w-100">
+            <div class="d-flex " v-for="(element, index) in nav" :key="index" :class="{unselected : element.selected == false}">
+                <div >
+                {{element.name}} 
+                </div>
+                <div class="new ms-2 align-self-center" v-if="element.new">
+                    <span>NEW</span>
+                </div>
             </div>
-            <div class="new ms-2 align-self-center" v-if="element.new">
-                <span>NEW</span>
+            <div class="unselected">
+                <i class="fa-solid fa-cart-shopping"></i>
             </div>
-        </div>
-        <div class="unselected">
-            <i class="fa-solid fa-cart-shopping"></i>
         </div>
     </div>
   </div>
@@ -72,10 +74,11 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../assets/style/variables.scss';
+
 .position-absolute{
     color : $txtColorWhite;
     top: 0;
-    left: 7.7%;
+    left: 0;
     font-weight: 300;
 }
 .unselected{

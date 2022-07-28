@@ -4,7 +4,7 @@
             <img :src="imgBanner" alt="Banner Img">
         </div>
         <div class="card-container">
-            <div class="d-flex align-items-center align-cont">
+            <div class="d-flex align-items-center justify-content-center align-cont">
                 <CardForBanner :txtForCard="txtForCard" />
             </div>
         </div>
@@ -49,5 +49,9 @@ export default {
                 padding: 0 80px;
             }
         }
+    }
+    .align-cont{
+        width: 500px;
+
     }
 </style>
