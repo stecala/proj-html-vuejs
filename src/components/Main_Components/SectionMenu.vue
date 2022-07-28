@@ -200,18 +200,24 @@ export default {
             this.currentID = elementID
             this.dishesID = 0
         },
+
+        //! method that make you go on the next dish and if is the last +1 the currentID becomes 0
         goNextDish(){
             this.dishesID = this.dishesID +1
             if(this.dishesID == this.menus[this.currentID].dishes.length){
                 this.dishesID = 0
             }
         },
+
+        //! method that make you go on the prev dish and if is the first-1 the currentID becomes length-1 
         goPrevDish(){
             this.dishesID = this.dishesID - 1
             if(this.dishesID == - 1){
                 this.dishesID = this.menus[this.currentID].dishes.length - 1
             }
         },
+
+        //! methods that tranform clickNxt/clickPrev in true for 0.5s used for animation on click
         clickAnimationNxt() {
             this.clickNxt = true
             setTimeout(() => {

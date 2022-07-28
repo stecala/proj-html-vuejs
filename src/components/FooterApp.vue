@@ -132,7 +132,7 @@ export default {
 .top-anchor{
   width: 50px;
   height: 30px;
-  bottom: 0;
+  bottom: 0.03rem;
   right: 10%;
   background-color: $txtGrey;
   color: $txtColorWhite;
