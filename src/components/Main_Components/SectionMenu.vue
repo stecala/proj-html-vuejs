@@ -1,6 +1,7 @@
 <template>
-  <div class="my-margin d-flex justify-content-center">
-    <div class="single-menu pt-5 px-5 unselected-menu" v-for="menu in menus" :key="menu.id">
+  <div class="my-margin d-flex justify-content-center ">
+    <div class="single-menu pt-5 px-5 position-relative " v-for="menu in menus" :key="menu.id" @click="setCurrentId(menu.id)" :class="(menu.id==currentID) ? 'selected-menu' : 'unselected-menu' ">
+        <div class="gradient-bg position-absolute" v-if="menu.id==currentID"></div>
        <h2 class="mt-5 ms-5">{{menu.title}}</h2>
         <div class="single-section-menu mt-5 px-5" v-for="dish in menu.dishes" :key="dish.id">
             <div class="row align-items-center">
@@ -123,6 +124,12 @@ export default {
                 },
             
             ],
+            currentID : 1,
+        }
+    },
+    methods :{
+        setCurrentId(elementID){
+            this.currentID = elementID
         }
     }
 }
@@ -134,6 +141,15 @@ export default {
     width: calc(100% / 3 - 100px);
     background-color: $bgGrey;
     min-height: 830px;
+    cursor: pointer;
+    .gradient-bg{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient( rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0));
+        z-index: -1;
+    }
     h2{
         text-transform: uppercase;
         font-size: 2rem;
@@ -150,6 +166,9 @@ export default {
 }
 .unselected-menu{
     color: $blackBg;
-
+}
+.selected-menu{
+    color: $txtColorWhite;
+    transform: translateY(-50px);
 }
 </style>
