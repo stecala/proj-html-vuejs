@@ -1,5 +1,7 @@
 # proj-html-vuejs
-
+<div align="center">
+  <img width="100%" height="100%" src="https://user-images.githubusercontent.com/98908632/181572520-b73e09fa-eeb0-4da8-b36c-aa2c0a34ac89.gif">
+</div>
 ## Project setup
 ```
 npm install
