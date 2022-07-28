@@ -1,24 +1,35 @@
 <template>
-  <div class="my-margin d-flex justify-content-center ">
-    <div class="single-menu pt-5 px-5 position-relative " v-for="menu in menus" :key="menu.id" @click="setCurrentId(menu.id)" :class="(menu.id==currentID) ? 'selected-menu' : 'unselected-menu' ">
-        <div class="gradient-bg position-absolute" v-if="menu.id==currentID"></div>
-       <h2 class="mt-5 ms-5">{{menu.title}}</h2>
-        <div class="single-section-menu mt-5 px-5" v-for="dish in menu.dishes" :key="dish.id">
-            <div class="row align-items-center">
-                <div class="col-10">
-                    <span class="title-dish">{{dish.dish}}</span>
-                </div>
-                <div class="col-2">
-                    <span>{{dish.price}}</span>
-                </div>
-                <div class="col-12 pt-4">
-                    <span>{{dish.description}}</span>
-                </div>
-            </div>
+<div>
+    <section>
+        <div class="my-margin d-flex justify-content-center ">
+            <div class="single-menu position-relative " v-for="menu in menus" :key="menu.id" @click="setCurrentId(menu.id)" :class="(menu.id==currentID) ? 'selected-menu' : 'unselected-menu' ">
 
+                <div class="img-cont" v-if="menu.id==currentID">
+                    <img :src="menu.menu_img" alt="menu image">
+                </div>
+                <div class="gradient-bg position-absolute" v-if="menu.id==currentID"></div>
+
+                <div class="highlight px-5 pt-5">
+                    <h2 class="mt-5 ms-5">{{menu.title}}</h2>
+                    <div class="single-section-menu mt-5 px-5" v-for="dish in menu.dishes" :key="dish.id">
+                        <div class="row align-items-center">
+                            <div class="col-10">
+                                <span class="title-dish">{{dish.dish}}</span>
+                            </div>
+                            <div class="col-2">
+                                <span>{{dish.price}}</span>
+                            </div>
+                            <div class="col-12 pt-4">
+                                <span>{{dish.description}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
         </div>
-    </div>
-  </div>
+    </section>
+</div>
 </template>
 
 <script>
@@ -142,13 +153,30 @@ export default {
     background-color: $bgGrey;
     min-height: 830px;
     cursor: pointer;
+    transition: all 0.5s;
+    .img-cont{
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 840px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .highlight{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
     .gradient-bg{
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient( rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0));
-        z-index: -1;
+        background-image: linear-gradient( rgb(0, 0, 0), rgba(0, 0, 0, 0.452));
+        z-index: 2;
     }
     h2{
         text-transform: uppercase;
@@ -170,5 +198,6 @@ export default {
 .selected-menu{
     color: $txtColorWhite;
     transform: translateY(-50px);
+    
 }
 </style>
