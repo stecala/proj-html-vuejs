@@ -2,31 +2,42 @@
 <div>
     <section>
         <div class="my-margin d-flex justify-content-center ">
-            <div class="single-menu position-relative " v-for="menu in menus" :key="menu.id" @click="setCurrentId(menu.id)" :class="(menu.id==currentID) ? 'selected-menu' : 'unselected-menu' ">
 
-                <div class="img-cont" v-if="menu.id==currentID">
-                    <img :src="menu.menu_img" alt="menu image">
-                </div>
-                <div class="gradient-bg position-absolute" v-if="menu.id==currentID"></div>
+                
+                <div class="single-menu position-relative " v-for="menu in menus" :key="menu.id" @click="setCurrentId(menu.id)" :class="(menu.id==currentID) ? 'selected-menu' : 'unselected-menu' " >
+                    <a href="#section">
+                        <div class="img-cont" v-if="menu.id==currentID">
+                            <img :src="menu.menu_img" alt="menu image">
+                        </div>
+                        <div class="gradient-bg position-absolute" v-if="menu.id==currentID"></div>
 
-                <div class="highlight px-5 pt-5">
-                    <h2 class="mt-5 ms-5">{{menu.title}}</h2>
-                    <div class="single-section-menu mt-5 px-5" v-for="dish in menu.dishes" :key="dish.id">
-                        <div class="row align-items-center">
-                            <div class="col-10">
-                                <span class="title-dish">{{dish.dish}}</span>
-                            </div>
-                            <div class="col-2">
-                                <span>{{dish.price}}</span>
-                            </div>
-                            <div class="col-12 pt-4">
-                                <span>{{dish.description}}</span>
+                        <div class="highlight px-5 pt-5">
+                            <h2 class="mt-5 ms-5">{{menu.title}}</h2>
+                            <div class="single-section-menu mt-5 px-5" v-for="dish in menu.dishes" :key="dish.id">
+                                <div class="row align-items-center">
+                                    <div class="col-10">
+                                        <span class="title-dish">{{dish.dish}}</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <span>{{dish.price}}</span>
+                                    </div>
+                                    <div class="col-12 pt-4">
+                                        <span>{{dish.description}}</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                
                 </div>
-            
+        </div>
+    </section>
+    <section>
+        <div class="banner-section my-margin position-relative" id="section">
+            <div>
+                    <img :src="menus[currentID].banner_img" alt="banner img">
             </div>
+
         </div>
     </section>
 </div>
@@ -41,7 +52,7 @@ export default {
                     id : '0',
                     title : "hors d'oeuvres",
                     'menu_img' : '/img/menu-hors.jpg',
-                    'banner_img' : "/img/Hors-d'oeuvre.jpg",
+                    'banner_img' : "/img/Hors-d’oeuvre.jpg",
                     dishes : [
                         {
                             id : 0,
@@ -193,11 +204,25 @@ export default {
     }
 }
 .unselected-menu{
-    color: $blackBg;
+    a{
+        color: $blackBg;
+    }
 }
 .selected-menu{
-    color: $txtColorWhite;
-    transform: translateY(-50px);
+    a{
+        color: $txtColorWhite;
+    }
+        transform: translateY(-50px);
     
+}
+.banner-section{
+    width: 100%;
+    min-height: 800px;
+    img{
+        width: 100%;
+        height: 800px;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 </style>
