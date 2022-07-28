@@ -1,6 +1,21 @@
 <template>
-  <div class="my-margin">
-    <div class="single-menu mx-auto">
+  <div class="my-margin d-flex justify-content-center">
+    <div class="single-menu pt-5 px-5 unselected-menu" v-for="menu in menus" :key="menu.id">
+       <h2 class="mt-5 ms-5">{{menu.title}}</h2>
+        <div class="single-section-menu mt-5 px-5" v-for="dish in menu.dishes" :key="dish.id">
+            <div class="row align-items-center">
+                <div class="col-10">
+                    <span class="title-dish">{{dish.dish}}</span>
+                </div>
+                <div class="col-2">
+                    <span>{{dish.price}}</span>
+                </div>
+                <div class="col-12 pt-4">
+                    <span>{{dish.description}}</span>
+                </div>
+            </div>
+
+        </div>
     </div>
   </div>
 </template>
@@ -116,7 +131,25 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/style/variables.scss';
 .single-menu{
-    max-width: calc(100% / 3 - 200px);
+    width: calc(100% / 3 - 100px);
+    background-color: $bgGrey;
+    min-height: 830px;
+    h2{
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    .single-section-menu{
+        .title-dish{
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
 }
+.unselected-menu{
+    color: $blackBg;
 
+}
 </style>
