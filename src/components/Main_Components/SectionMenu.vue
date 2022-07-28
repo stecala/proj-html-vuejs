@@ -33,9 +33,31 @@
         </div>
     </section>
     <section>
-        <div class="banner-section my-margin position-relative" id="section">
-            <div>
+        <div class="banner-section my-margin position-relative d-flex align-items-center " id="section">
+            <div class="position-absolute img-banner">
                     <img :src="menus[currentID].banner_img" alt="banner img">
+            </div>
+            <div class="card-container position-relative" >
+                <div class="row">
+                    <div class="col-9">
+                        <h2 class="text-uppercase card-title">
+                            {{menus[currentID].dishes[dishesID].dish}}
+                        </h2>
+                    </div>
+                    <div class="col-3 text-end fw-semibold pt-3 ">
+                        <span>{{menus[currentID].dishes[dishesID].price}}</span>
+                    </div>
+                </div>
+                <div class="row px-3">
+                    <div class=" col-12 p-0">
+                        <div class="divider"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -147,6 +169,7 @@ export default {
             
             ],
             currentID : 1,
+            dishesID : 0,
         }
     },
     methods :{
@@ -218,11 +241,37 @@ export default {
 .banner-section{
     width: 100%;
     min-height: 800px;
-    img{
+    .img-banner{
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 800px;
-        object-fit: cover;
-        object-position: center;
+        z-index: -1;
+        img{
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+            object-position: center;
+        }
     }
+    .card-container{
+        width: 530px;
+        min-height: 600px;
+        margin-left: 300px;
+        background-color: $blackBg;
+        color: $txtColorWhite;
+        padding: 90px;
+        .card-title{
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        .divider{
+            width: 60px;
+            height: 1px;
+            background-color: $txtColorUnselected;
+            margin-top: 70px;
+        }
+    }
+    
 }
 </style>
